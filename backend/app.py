@@ -114,6 +114,11 @@ def get_db_connection():
     return conn
 
 
+@app.route('/')
+def home():
+    return 'Job Screening AI Agent Backend is Running!'
+
+
 @app.route('/jobs', methods=['GET'])
 def get_jobs():
     """Fetch job listings from the job_description table (only id, title, and description)."""
