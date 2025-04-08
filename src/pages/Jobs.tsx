@@ -16,7 +16,7 @@ export default function Jobs() {
 
   // Fetch jobs from backend
   useEffect(() => {
-    fetch('http://localhost:5000/jobs')
+    fetch('https://jobscrenningaiagent.onrender.com/jobs')
       .then((response) => response.json())
       .then((data) => setJobs(data))
       .catch((error) => console.error('Error fetching jobs:', error));
@@ -35,7 +35,7 @@ export default function Jobs() {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/jobs', {
+      const response = await fetch('https://jobscrenningaiagent.onrender.com/jobs', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newJob),

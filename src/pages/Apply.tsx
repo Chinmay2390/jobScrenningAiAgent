@@ -38,7 +38,7 @@ export default function Apply() {
     fileData.append('resume', formData.resume);
   
     try {
-      const response = await fetch('http://127.0.0.1:5000/apply', {
+      const response = await fetch('https://jobscrenningaiagent.onrender.com/apply', {
         method: 'POST',
         body: fileData,  // ✅ Don't manually set Content-Type
       });

@@ -4,7 +4,7 @@ import axios from 'axios';
 const TopApplicants = ({ job }) => {
   const handleSendMail = async (applicant) => {
     try {
-      const res = await axios.post('http://localhost:5000/send_mail', {
+      const res = await axios.post('https://jobscrenningaiagent.onrender.com/send_mail', {
         email: applicant.email,
         name: applicant.name,
         job_title: job.job_title,
