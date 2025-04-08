@@ -25,7 +25,7 @@ EMAIL_PASSWORD = os.getenv("EMAIL_PASS")
 
 app = Flask(__name__)
 # CORS(app)  # Enable CORS for frontend communication
-CORS(app, supports_credentials=True, origins=["http://localhost:5173"])
+CORS(app, supports_credentials=True, origins=["https://job-screnning-ai-agent.vercel.app"])
 
 
 DB_PATH = 'resumes.db'  # Path to SQLite database
